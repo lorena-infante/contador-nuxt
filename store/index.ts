@@ -52,7 +52,7 @@ const mutations = {
   },
   SET_FILTERS(state: State, filters: Partial<State["filters"]>) {
     state.filters = { ...state.filters, ...filters };
-    saveFiltersStorage(state.filters);
+    saveFiltersToSessionStorage(state.filters);
   },
   SET_SEARCH_TERM(state: State, term: string) {
     state.searchTerm = term;
@@ -200,7 +200,7 @@ function saveToLocalStorage(counters: Counter[]) {
   }
 }
 
-function saveFiltersToSessionStorage() {
+function saveFiltersToSessionStorage(filters: State["filters"]) {
   if (import.meta.client) {
     sessionStorage.setItem("counterFilters", JSON.stringify(state.filters));
   }
