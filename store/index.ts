@@ -10,7 +10,7 @@ interface State {
   filters: {
     type: "all" | "greater" | "less";
     value: number;
-    sortBy: "name" | "value" | "none";
+    sortBy: "name" | "value";
     sortOrder: "asc" | "desc";
   };
   searchTerm: string;
@@ -22,7 +22,7 @@ const state: State = {
   filters: {
     type: "all",
     value: 0,
-    sortBy: "none",
+    sortBy: "name",
     sortOrder: "asc",
   },
   searchTerm: "",
@@ -164,24 +164,22 @@ const getters = {
       });
     }
     // sort
-    if (state.filters.sortBy != "none") {
-      result.sort((a, b) => {
-        let aValue: string | number;
-        let bValue: string | number;
+    result.sort((a, b) => {
+      let aValue: string | number;
+      let bValue: string | number;
 
-        if (state.filters.sortBy === "name") {
-          aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-        } else {
-          aValue = a.value;
-          bValue = b.value;
-        }
-        if (state.filters.sortOrder === "desc") {
-          return bValue > aValue ? 1 : -1;
-        }
-        return aValue > bValue ? 1 : -1;
-      });
-    }
+      if (state.filters.sortBy === "name") {
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+      } else {
+        aValue = a.value;
+        bValue = b.value;
+      }
+      if (state.filters.sortOrder === "desc") {
+        return bValue > aValue ? 1 : -1;
+      }
+      return aValue > bValue ? 1 : -1;
+    });
     return result;
   },
 
