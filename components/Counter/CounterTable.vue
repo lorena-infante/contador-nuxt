@@ -16,11 +16,11 @@
                 </tr>
             </thead>
             <tbody class="table-body">
-                <CounterRow v-for="counter in filteredCounters" :key="counter.id" :counter="counter" />
+                <!--<CounterRow v-for="counter in filteredCounters" :key="counter.id" :counter="counter" />-->
             </tbody>
             <tfoot>
-                <td class="footer-label">Total:</td>
-                <td class="footer-total">{{ totalSum }}</td>
+                <tr class="footer-label">Total:</tr>
+                <tr class="footer-total">{{ totalSum }}</tr>
             </tfoot>
         </table>
         <!--Empty state-->
@@ -37,7 +37,7 @@ import { computed } from 'vue';
 
 const store = useNuxtApp().$store as any;
 
-const filteredCounters = computed(() => store.getters.getFilteredCounters);
+const filteredCounters = computed(() => store.getters.filteredCounters);
 const counters = computed(() => store.state.counters);
 const totalSum = computed(() => store.getters.totalSum);
 const currentSort = computed(() => store.state.filters.sortBy);

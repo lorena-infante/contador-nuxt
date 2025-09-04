@@ -1,0 +1,37 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+
+    .header{
+        max-width:100%;
+        display:flex;
+        flex-direction: column;
+        background-color: var(--background-color);
+        color:var(--color-primary);
+        padding: 2rem;
+        text-align: center;
+        && img.img-logo{
+            max-height: 8rem;
+        }
+        && .app-title{
+            background-color: var(--color-primary);
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 761px) {
+    .app-container .header{
+        padding: 1rem;
+        && img.img-logo{
+            max-height: 6rem;
+        }
+        && .app-title{
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+    }
+    
+}
