@@ -8,19 +8,18 @@
                 App Contador - Lorena Infante
             </span>
         </div>
-        <section class="body-container d-flex">
-            <div class="filters-container d-flex flex-column">
-                <span class="searchbar w-100">searchbar</span>
+        <div class="body-container">
+            <div class="filters-container">
+                <span class="searchbar">searchbar</span>
                 <span class="filter">Filter dropdown</span>
+                <span class="add-btn">
+                    <button class="btn btn-primary">Agregar contador</button>
+                </span>
             </div>
-            <div class="add-btn d-flex w-100">
-                <button class="btn btn-primary">Agregar contador</button>
-            </div>
-        </section>
-        <div class="table-container d-flex">
-            <h1>Contadores App</h1>
-            <CounterTable />
+            <div class="table-container">
+                <CounterTable />
 
+            </div>
         </div>
 
     </div>
