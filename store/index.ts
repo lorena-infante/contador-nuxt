@@ -17,7 +17,12 @@ interface State {
 }
 
 const state: State = {
-  counters: [],
+  counters: [
+    //TODO: borrar estos datos de prueba
+    { id: 1, name: "Manzanas", value: 5, createdAt: Date.now() - 1000 },
+    { id: 2, name: "Naranjas", value: 3, createdAt: Date.now() - 2000 },
+    { id: 3, name: "Plátanos", value: 8, createdAt: Date.now() - 3000 },
+  ],
   showModal: false,
   filters: {
     type: "all",
@@ -200,7 +205,7 @@ function saveToLocalStorage(counters: Counter[]) {
 
 function saveFiltersToSessionStorage(filters: State["filters"]) {
   if (import.meta.client) {
-    sessionStorage.setItem("counterFilters", JSON.stringify(state.filters));
+    sessionStorage.setItem("counterFilters", JSON.stringify(filters));
   }
 }
 
