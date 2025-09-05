@@ -3,15 +3,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useNuxtApp } from '#app'
 
 const store = useNuxtApp().$store as any
-const isOpen = ref(false)
 
 const showAddCounterModal = async () => {
-    isOpen.value = true
-
     const Swal = (await import('sweetalert2')).default
 
     const { value: counterName } = await Swal.fire({
@@ -127,12 +123,8 @@ const showAddCounterModal = async () => {
         }
     }
 }
-const hideAddCounterModal = () => {
-    isOpen.value = false
-}
 
 defineExpose({
-    showAddCounterModal,
-    hideAddCounterModal
+    showAddCounterModal
 })
 </script>
