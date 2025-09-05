@@ -16,9 +16,14 @@
                 <div class="filter">
                     <FilterDropdown />
                 </div>
-                <span class="add-btn">
-                    <button class="btn btn-primary">Agregar contador</button>
-                </span>
+                <div class="add-btn">
+                    <button class="btn btn-primary" @click="openAddModal">
+                        <span class="material-symbols-outlined">add</span>
+                        Agregar contador
+                    </button>
+                    <AddCounterModal ref="addModalRef" />
+
+                </div>
             </div>
             <div class="table-container">
                 <CounterTable />
@@ -30,6 +35,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import AddCounterModal from '~/components/Counter/AddCounterModal.vue'
+const addModalRef = ref<InstanceType<typeof AddCounterModal> | null>(null)
 
-
+const openAddModal = async () => {
+    try {
+        if (addModalRef.value) {
+            await addModalRef.value.showAddCounterModal()
+        }
+    } catch (error) {
+        console.error('Error opening modal:', error)
+    }
+}
 </script>

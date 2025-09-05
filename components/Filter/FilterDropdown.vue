@@ -22,16 +22,15 @@
 <script setup lang="ts">
 const store = useNuxtApp().$store as any
 
-// Reactive data
+
 const filterType = ref(store.state.filters.type)
 const filterValue = ref(store.state.filters.value)
 
-// Computed
 const isFiltersEmpty = computed(() => {
     return filterType.value === 'all' && filterValue.value === 0
 })
 
-// Methods
+
 const updateFilters = () => {
     store.commit('SET_FILTERS', {
         type: filterType.value,
@@ -45,7 +44,7 @@ const clearFilters = () => {
     updateFilters()
 }
 
-// Watch store changes
+
 watch(() => store.state.filters, (newFilters) => {
     filterType.value = newFilters.type
     filterValue.value = newFilters.value
