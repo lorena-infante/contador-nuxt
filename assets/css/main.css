@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "./index.css";
+@import "./counterTable.css";
 
 :root{
     --font-base: 'Noto Sans', sans-serif;
-    --color-primary: #f88a33;
-    --color-secondary: #0871b5;
-    --color-tertiary: #414141;
+    --primary: #f88a33;
+    --secondary: #0871b5;
+    --tertiary: #414141;
     --background-color: #ffffff;
 }
 

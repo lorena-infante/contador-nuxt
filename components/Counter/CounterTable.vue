@@ -1,8 +1,8 @@
 <template>
     <div class="counter-table-container">
         <table class="counter-table">
-            <thead>
-                <tr>
+            <thead class="table-header">
+                <tr class="header-row">
                     <th class="sortable-header" @click="sortBy('name')">Nombre
                         <span class="material-symbols-outlined sort-icon">
                             {{ getSortIcon('name') }}
@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody class="table-body">
-                <!--<CounterRow v-for="counter in filteredCounters" :key="counter.id" :counter="counter" />-->
+                <CounterRow v-for="counter in filteredCounters" :key="counter.id" :counter="counter" />
             </tbody>
             <tfoot>
                 <tr class="footer-label">Total:</tr>

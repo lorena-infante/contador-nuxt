@@ -1,0 +1,35 @@
+.counter-table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+    && .table-header {
+        display:flex;
+        gap:1rem;
+        && .header-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-around;
+            width:100%;
+            && .sortable-header {
+                display:flex;
+                gap:0.5rem;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:761px){
+    .counter-table-container {
+        && .table-header {
+            && .header-row {
+                justify-content: space-between;
+            }
+        }
+    }
+    
+}
