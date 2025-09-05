@@ -10,7 +10,9 @@
         </div>
         <div class="body-container">
             <div class="filters-container">
-                <span class="searchbar">searchbar</span>
+                <div class="searchbar">
+                    <SearchBar />
+                </div>
                 <div class="filter">
                     <FilterDropdown />
                 </div>
