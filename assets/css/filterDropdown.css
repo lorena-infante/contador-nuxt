@@ -1,15 +1,39 @@
 .filter-container{
     display:flex;
-    /*flex-direction:column;*/
     width:100%;
     && .filter-group{
+        display:flex;
+        gap:0.5rem;
+
         && .label-container{
             display:flex;
             align-items:center;
             gap:0.5rem;
             width:100%;
             font-weight:bold;
+            && .filter-type{
+                display:flex;
+                height:100%;
+                gap:0.5rem;
+                && .filter-select, && .filter-input{
+                    border: 1.5px solid var(--tertiary);
+                    border-radius:0.5rem;
+                    padding:0.5rem;
+                    && .filter-option{
+                        cursor:pointer;
+                        border:none;
+                        background:var(--light-gray);
+                    }
+                }
+                && .btn-clear-filter{
+                    && .material-symbols-outlined{
+                        color:var(--white)!important;
+                    }
+                }
+            }
+
         }
+
     }
 
 }

@@ -10,6 +10,7 @@
     --primary: #f88a33;
     --secondary: #0871b5;
     --tertiary: #414141;
+    --light-gray:#d3d3d332;
     --background-color: #ffffff;
     --white: #ffffff;
     --black: #000000;
@@ -25,4 +26,24 @@ body {
 .material-symbols-outlined {
     font-size: 1.2rem !important;
     color: var(--tertiary);
+}
+
+.btn{
+    background-color: var(--white);
+    color: var(--tertiary);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display:flex;
+    text-align:center;
+    align-items: anchor-center;
+    gap: 0.3rem;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background-color: var(--primary);
+    color: var(--white);
 }

@@ -8,16 +8,16 @@
                 <label for="filter-type">Filtrar por cantidad:</label>
                 <span class="filter-type">
                     <select id="filter-type" v-model="filterType" @change="updateFilters" class="filter-select">
-                        <option value="all">Todos</option>
-                        <option value="greater">Mayor a</option>
-                        <option value="less">Menor a</option>
+                        <option value="all" class="filter-option">Todos</option>
+                        <option value="greater" class="filter-option">Mayor a</option>
+                        <option value="less" class="filter-option">Menor a</option>
                     </select>
 
                     <input v-if="filterType !== 'all'" v-model.number="filterValue" type="number" min="0" max="20"
                         placeholder="Número" class="filter-input" @input="updateFilters" />
                 </span>
                 <button @click="clearFilters" class="btn btn-clear-filter" :disabled="isFiltersEmpty">
-                    <span class="material-symbols-outlined">filter_list_off</span>
+                    <span class="material-symbols-outlined filter_list_off">filter_list_off</span>
                     Limpiar Filtros
                 </button>
             </span>
