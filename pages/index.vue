@@ -11,7 +11,9 @@
         <div class="body-container">
             <div class="filters-container">
                 <span class="searchbar">searchbar</span>
-                <span class="filter">Filter dropdown</span>
+                <div class="filter">
+                    <FilterDropdown />
+                </div>
                 <span class="add-btn">
                     <button class="btn btn-primary">Agregar contador</button>
                 </span>
