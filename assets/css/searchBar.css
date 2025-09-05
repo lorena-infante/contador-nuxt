@@ -9,10 +9,6 @@
         box-shadow: 0px 2px 5px var(--tertiary);
         display: flex;
 
-        && .search-icon, && .close-btn {
-            font-size: 1.2rem !important;
-            color: var(--tertiary);
-        }
         && .search-input {
             width: 100%;
             border: none;

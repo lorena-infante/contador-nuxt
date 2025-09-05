@@ -3,8 +3,9 @@
 @import "./searchBar.css";
 @import "./counterTable.css";
 @import "./counterRow.css";
+@import "./filterDropdown.css";
 
-:root{
+:root {
     --font-base: 'Noto Sans', sans-serif;
     --primary: #f88a33;
     --secondary: #0871b5;
@@ -14,9 +15,14 @@
     --black: #000000;
 }
 
-body{
+body {
     font-family: var(--font-base);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+    font-size: 1.2rem !important;
+    color: var(--tertiary);
 }

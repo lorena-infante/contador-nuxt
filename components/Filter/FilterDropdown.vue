@@ -1,21 +1,28 @@
 <template>
     <div class="filter-container">
         <div class="filter-group">
-            <label for="filter-type">Mostrar contadores:</label>
-            <select id="filter-type" v-model="filterType" @change="updateFilters" class="filter-select">
-                <option value="all">Todos</option>
-                <option value="greater">Mayores que</option>
-                <option value="less">Menores que</option>
-            </select>
+            <span class="label-container">
+                <span class="material-symbols-outlined">
+                    filter_alt
+                </span>
+                <label for="filter-type">Filtrar por cantidad:</label>
+                <span class="filter-type">
+                    <select id="filter-type" v-model="filterType" @change="updateFilters" class="filter-select">
+                        <option value="all">Todos</option>
+                        <option value="greater">Mayor a</option>
+                        <option value="less">Menor a</option>
+                    </select>
 
-            <input v-if="filterType !== 'all'" v-model.number="filterValue" type="number" min="0" max="20"
-                placeholder="Número" class="filter-input" @input="updateFilters" />
+                    <input v-if="filterType !== 'all'" v-model.number="filterValue" type="number" min="0" max="20"
+                        placeholder="Número" class="filter-input" @input="updateFilters" />
+                </span>
+                <button @click="clearFilters" class="btn btn-clear-filter" :disabled="isFiltersEmpty">
+                    <span class="material-symbols-outlined">filter_list_off</span>
+                    Limpiar Filtros
+                </button>
+            </span>
         </div>
 
-        <button @click="clearFilters" class="btn btn-secondary" :disabled="isFiltersEmpty">
-            <span class="material-symbols-outlined">filter_list_off</span>
-            Limpiar Filtros
-        </button>
     </div>
 </template>
 
