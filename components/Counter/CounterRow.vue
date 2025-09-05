@@ -3,14 +3,14 @@
         <td class="counter-name">{{ counter.name }}</td>
         <td class="counter-controls">
             <div class="controls-container">
-                <button @click="decrement">
+                <button class="btn btn-decrement" @click="decrement">
                     <span class="material-symbols-outlined">remove</span>
                 </button>
                 <span class="counter-value">{{ counter.value }}</span>
-                <button @click="increment">
+                <button class="btn btn-increment" @click="increment">
                     <span class="material-symbols-outlined">add</span>
                 </button>
-                <button @click="confirmDelete">
+                <button class="btn btn-delete" @click="confirmDelete">
                     <span class="material-symbols-outlined">delete</span>
                 </button>
             </div>

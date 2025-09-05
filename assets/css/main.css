@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "./index.css";
 @import "./counterTable.css";
+@import "./counterRow.css";
 
 :root{
     --font-base: 'Noto Sans', sans-serif;
@@ -8,6 +9,8 @@
     --secondary: #0871b5;
     --tertiary: #414141;
     --background-color: #ffffff;
+    --white: #ffffff;
+    --black: #000000;
 }
 
 body{

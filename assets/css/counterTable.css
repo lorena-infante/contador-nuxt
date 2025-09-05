@@ -29,6 +29,7 @@
         flex-direction: column;
         gap:0.5rem;
         border: 1px dotted var(--primary);
+        padding-block:1rem;
         
         && .empty-state{
             padding:1rem;
