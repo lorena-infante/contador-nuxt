@@ -2,10 +2,10 @@
     <div class="search-container">
         <div class="search-input-group">
             <span class="material-symbols-outlined search-icon">search</span>
-            <input v-model="searchTerm" type="text" placeholder="Buscar contador por nombre..." class="search-input"
+            <input v-model="searchTerm" type="text" placeholder="Buscar por nombre..." class="search-input"
                 @input="updateSearch" />
-            <button v-if="searchTerm" @click="clearSearch" class="clear-search-btn">
-                <span class="material-symbols-outlined">close</span>
+            <button @click="clearSearch" class="clear-search-btn">
+                <span class="material-symbols-outlined close-btn">close</span>
             </button>
         </div>
     </div>
