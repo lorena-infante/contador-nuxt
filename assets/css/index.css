@@ -8,7 +8,7 @@
         max-width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: var(--background-color);
+        background-color: var(--light-gray);
         color: var(--primary);
         padding: 1rem;
         text-align: center;
@@ -18,7 +18,7 @@
         }
 
         && .app-title {
-            background-color: var(--primary);
+            background-color: var(--secondary);
             color: white;
         }
     }
@@ -26,17 +26,40 @@
     .body-container {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 1.5rem;
         height: 100dvh;
 
         && .filters-container {
             display: flex;
-            width:100%;
-            gap:1rem;
+            width: 100%;
+            gap: 1rem;
+            justify-content: space-between;
+
+            && .add-btn {
+                && .btn-add-counter {
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    width: 100%;
+                    border: 1px solid var(--secondary);
+                    color: var(--black);
+                    text-align: center;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            && .add-btn:hover {
+                && .btn-add-counter {
+                    background-color: var(--secondary);
+                    color: var(--white);
+                }
+            }
         }
+
         && .table-container {
-            display:flex;
-            margin-block-start:1rem;
+            display: flex;
+            margin-block-start: 1rem;
         }
     }
 }
@@ -54,6 +77,7 @@
             padding: 0.5rem;
         }
     }
+
     .body-container {
         display: flex;
         flex-direction: column;

@@ -11,6 +11,7 @@
     --secondary: #0871b5;
     --tertiary: #414141;
     --light-gray:#d3d3d332;
+    --light-blue:#2c93e293;
     --background-color: #ffffff;
     --white: #ffffff;
     --black: #000000;
@@ -25,7 +26,7 @@ body {
 
 .material-symbols-outlined {
     font-size: 1.2rem !important;
-    color: var(--tertiary);
+   
 }
 
 .btn{

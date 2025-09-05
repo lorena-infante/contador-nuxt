@@ -17,12 +17,11 @@
                     <FilterDropdown />
                 </div>
                 <div class="add-btn">
-                    <button class="btn btn-primary" @click="openAddModal">
+                    <button class="btn btn-add-counter" @click="openAddModal">
                         <span class="material-symbols-outlined">add</span>
                         Agregar contador
                     </button>
                     <AddCounterModal ref="addModalRef" />
-
                 </div>
             </div>
             <div class="table-container">
