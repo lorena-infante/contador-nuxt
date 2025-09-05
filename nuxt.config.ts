@@ -15,4 +15,7 @@ export default defineNuxtConfig({
     },
   },
   plugins: ["~/plugins/persistedState.ts"],
+  nitro: {
+    preset: "vercel",
+  },
 });
