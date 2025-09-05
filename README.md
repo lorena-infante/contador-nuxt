@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# Aplicación Nuxt - Contador
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este es un proyecto Nuxt.js creado para fines de entrevista.
 
-## Setup
+## Características
 
-Make sure to install dependencies:
+- Vue 3, Nuxt 3 y Typescript
+- Renderizado del lado del servidor
+- Enrutamiento basado en archivos
+- Componentes auto-importados
+- Gestión de estado con Vuex
+- Interfaz responsive adaptada a dispositivos móviles y escritorio
+- Uso de [SweetAlert](https://sweetalert2.github.io/) para notificaciones y alertas personalizadas
+- Iconografía con [Material Symbols](https://fonts.google.com/icons) para una experiencia visual moderna
+
+## Instalación
 
 ```bash
-# npm
+# Instalar dependencias
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Iniciar servidor de desarrollo
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+## Compilación
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## Despliegue
 
-```bash
-# npm
-npm run preview
+Consulta la [documentación de despliegue de Nuxt](https://nuxt.com/docs/getting-started/deployment).
 
-# pnpm
-pnpm preview
+## Licencia
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+MIT

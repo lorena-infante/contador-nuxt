@@ -40,8 +40,13 @@ import { useNuxtApp } from 'nuxt/app';
 import { computed } from 'vue';
 
 const store = useNuxtApp().$store as any;
-
-const filteredCounters = computed(() => store.getters.filteredCounters);
+//TODO: cambiar esto
+const filteredCounters = computed(() => [
+    { id: 1, name: 'Manzanas', value: 5 },
+    { id: 2, name: 'Naranjas', value: 3 },
+    { id: 3, name: 'Plátanos', value: 8 }
+])
+//TODO: Descomentar const filteredCounters = computed(() => store.getters.filteredCounters);
 const counters = computed(() => store.state.counters);
 const totalSum = computed(() => store.getters.totalSum);
 const currentSort = computed(() => store.state.filters.sortBy);
