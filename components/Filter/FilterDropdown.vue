@@ -14,7 +14,7 @@
                     </select>
 
                     <input v-if="filterType !== 'all'" v-model.number="filterValue" type="number" min="0" max="20"
-                        placeholder="Número" class="filter-input" @input="updateFilters" />
+                        placeholder="Num" class="filter-input" @input="updateFilters" />
                 </span>
                 <button @click="clearFilters" class="btn btn-clear-filter" :disabled="isFiltersEmpty">
                     <span class="material-symbols-outlined filter_list_off">filter_list_off</span>

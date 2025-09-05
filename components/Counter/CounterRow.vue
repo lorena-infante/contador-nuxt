@@ -44,11 +44,11 @@ const confirmDelete = async () => {
 
     const result = await Swal.fire({
         title: '¿Eliminar contador?',
-        text: `¿Estás seguro de eliminar "${props.counter.name}"? Esta acción no se puede deshacer.`,
+        text: `¿Estás seguro de eliminar "${props.counter.name}"?`,
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#e74c3c',
-        cancelButtonColor: '#95a5a6',
+        confirmButtonColor: '#0871b5',
+        cancelButtonColor: '#414141',
         confirmButtonText: 'Sí, eliminar',
         cancelButtonText: 'Cancelar'
     })

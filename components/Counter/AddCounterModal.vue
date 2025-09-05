@@ -11,18 +11,18 @@ const showAddCounterModal = async () => {
     const Swal = (await import('sweetalert2')).default
 
     const { value: counterName } = await Swal.fire({
-        title: 'Agregar Nuevo Contador',
+        title: 'Añadir Nuevo',
         html: `
       <div style="text-align: left;">
-        <label for="counter-name" style="display: block; margin-bottom: 8px; font-weight: 500;">
+        <label for="counter-name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">
           Nombre del contador:
         </label>
         <input 
           id="counter-name" 
           class="swal2-input" 
-          placeholder="Ingresa el nombre..." 
+          placeholder="Juan Pérez" 
           maxlength="20"
-          style="width: 100%; margin: 0; padding: 12px; border: 2px solid #ddd; border-radius: 8px;"
+          style="width: 100%; margin: 0; padding: 1rem; border: 2px solid #d3d3d332; border-radius: 0.5rem;"
         />
         <div id="char-counter" style="text-align: right; font-size: 12px; color: #666; margin-top: 4px;">
           0/20 caracteres
@@ -33,10 +33,10 @@ const showAddCounterModal = async () => {
     `,
         focusConfirm: false,
         showCancelButton: true,
-        confirmButtonText: 'Agregar Contador',
+        confirmButtonText: 'Agregar',
         cancelButtonText: 'Cancelar',
-        confirmButtonColor: '#3498db',
-        cancelButtonColor: '#95a5a6',
+        confirmButtonColor: '#0871b5',
+        cancelButtonColor: '#414141',
         didOpen: () => {
             const input = document.getElementById('counter-name') as HTMLInputElement
             const charCounter = document.getElementById('char-counter')
@@ -54,9 +54,9 @@ const showAddCounterModal = async () => {
 
 
                 if (length > 15) {
-                    charCounter!.style.color = '#f39c12'
+                    charCounter!.style.color = '#f88a33'
                 } else {
-                    charCounter!.style.color = '#666'
+                    charCounter!.style.color = '#414141'
                 }
             })
 
@@ -118,7 +118,7 @@ const showAddCounterModal = async () => {
                 title: 'Error',
                 text: error.message,
                 icon: 'error',
-                confirmButtonColor: '#e74c3c'
+                confirmButtonColor: '#0871b5'
             })
         }
     }
