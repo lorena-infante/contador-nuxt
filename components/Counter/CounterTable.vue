@@ -16,18 +16,22 @@
                 </tr>
             </thead>
             <tbody class="table-body">
+                <!--Empty state-->
+                <div v-if="filteredCounters.length === 0" class="empty-state">
+                    <span class="material-symbols-outlined">
+                        hourglass_empty
+                    </span>
+                    <p v-if="counters.length === 0">No hay contadores agregados. Por favor agregue uno para continuar
+                    </p>
+                    <p v-else>No hay contadores que coincidan con el filtro aplicado</p>
+                </div>
                 <CounterRow v-for="counter in filteredCounters" :key="counter.id" :counter="counter" />
             </tbody>
-            <tfoot>
+            <tfoot class="table-footer">
                 <tr class="footer-label">Total:</tr>
                 <tr class="footer-total">{{ totalSum }}</tr>
             </tfoot>
         </table>
-        <!--Empty state-->
-        <div v-if="filteredCounters.length === 0" class="empty-state">
-            <p v-if="counters.length === 0">No hay contadores agregados. Por favor agregue uno para continuar</p>
-            <p v-else>No hay contadores que coincidan con el filtro aplicado</p>
-        </div>
     </div>
 </template>
 
